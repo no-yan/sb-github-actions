@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [10, 12]
+        node: [14, 16]
     runs-on: ${{ matrix.os }}
     steps:
       - name: checkout
@@ -26,10 +26,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: Set Node.js 12.x
+      - name: Set Node.js 16.x
         uses: actions/setup-node@v1.3.0
         with:
-          node-version: 12.x
+          node-version: 16.x
       - name: Install dependencies
         run: npm CI
       - name: lint
