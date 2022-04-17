@@ -28,8 +28,13 @@ jobs:
             ${{ runner.os}}-node-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: test
+      - name: Test
         run: npm test
+      - Upload test coverage
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-coverage-${{ matrix.os }}-${{ matrix.node }}
+        path: coverage
   lint:
     name: lint
     runs-on: ubuntu-latest
