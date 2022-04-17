@@ -1,0 +1,16 @@
+{
+  "name": "fizz-buzz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/no-yan/sb-github-actions",
+  "author": "noyan <63000297+no-yan@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "mocha": "^9.2.2"
+  }
+}
