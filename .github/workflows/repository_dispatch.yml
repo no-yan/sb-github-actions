@@ -1,7 +1,9 @@
+name: repository_dispatch
 on: repository_dispatch
 
 jobs:
-  dispatch:
+  test:
     runs-on: ubuntu-latest
     steps:
-      run: echo "${{ toJson(github.event) }}"
+      - name: Test
+        run: echo '${{ toJson(github.event) }}'
