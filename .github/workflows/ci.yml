@@ -31,6 +31,6 @@ jobs:
         with:
           node-version: 16.x
       - name: Install dependencies
-        run: npm CI
+        run: yarn install --frozen-lockfile
       - name: lint
         run: npm run lint
