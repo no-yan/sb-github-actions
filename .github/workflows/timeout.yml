@@ -1,0 +1,11 @@
+name: CI
+on:
+  label:
+    types: [created, deleted]
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2 # job全体
+    steps:
+      - run: sleep 300
+        timeout-minutes: 1 # step個別
